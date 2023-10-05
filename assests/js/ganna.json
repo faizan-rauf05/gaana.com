@@ -13,7 +13,7 @@
                  "song_name":"paro",
                  "album_name":"pyaar ka panchnaman 2",
                  "singers":"",
-                 "image_source":"assests/images/ppk2.jpg",
+                 "image_source":"images/ppk2.jpg",
                  "quality":{"low":"assests/songs/paro.mp3","medium":"","high":""},
                  "release_date":"date"      
                  },
