@@ -9,7 +9,7 @@ const music_container = document.querySelector("#song-cont"), music_player = doc
     return `
     <div class="trending-songs" onclick="playSong(this)" data-songobj='${JSON.stringify(e)}'> 
         <div class="song-card">
-            <img src="/${e.image_source}" alt="${e.song_name}">
+            <img src="${e.image_source}" alt="${e.song_name}">
                 <img id="p-btn" src="https://a10.gaanacdn.com/gn_img/images/play_1621599900.png" class="play-button" alt="">
                     <h3>${e.song_name}</h3>
                 </div>
