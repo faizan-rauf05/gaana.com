@@ -1,0 +1,72 @@
+/* RESPONSIVENESS */
+
+@media (max-width:450px) {
+
+    .search-bar,
+    .get-gana-plus,
+    .language,
+    .dark-mode {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .login {
+        text-align: end;
+    }
+
+    .left-header {
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .right-header {
+        width: 30%;
+    }
+
+    .song-card {
+        width: 80vw;
+        height: 200px;
+    }
+
+    .trending-songs {
+        flex-direction: column;
+    }
+
+    .song-flex {
+        flex-direction: column;
+        gap: 150px;
+    }
+
+    #hide-mob-ver {
+        display: none;
+    }
+
+    .song-actions {
+        display: none;
+    }
+
+    .music-player {
+        gap: 10px;
+        padding: 8px 10px;
+    }
+
+    .music-controls {
+        gap: 0;
+    }
+
+    .play-button {
+        top: 13\0px;
+        left: 143px;
+    }
+
+    #p-btn {
+        top: 136px;
+        left: 143px;
+    }
+}

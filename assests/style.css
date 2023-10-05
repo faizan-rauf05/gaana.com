@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background-color: #f5f5f5;
+    padding: 30px 40px;
+    display: flex;
+    height: 70px;
+}
+
+/* LEFT-HEADER  */
+
+.left-header {
+    position: relative;
+    display: flex;
+    width: 60%;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.left-header input {
+    width: 35vw;
+    padding: 14px 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.left-header .search-bar svg {
+    position: relative;
+    left: 30px;
+    top: 5px;
+}
+
+/* RIGHT-HEADER */
+
+.right-header {
+    display: flex;
+    align-items: center;
+    width: 39%;
+    gap: 20px;
+}
+
+.right-header a {
+    border: 1px solid rgb(244, 28, 28);
+    color: rgb(244, 28, 28);
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 7px 13px;
+    transition: 0.3s ease;
+}
+
+.right-header a:hover {
+    background-color: rgb(244, 28, 28);
+    color: #fff;
+}
+
+/* NAV START   */
+
+.nav {
+    display: flex;
+    gap: 20px;
+    padding-left: 40px;
+    margin: 20px 0;
+}
+
+.nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* SONG-SECTION  */
+
+.song-cont {
+    padding-left: 40px;
+    width: 100%;
+}
+
+.song-card {
+    width: 14vw;
+    height: 220px;
+    text-align: start;
+    position: relative;
+}
+
+.song-card img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.song-card .play-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 72px;
+    left: 78px;
+    display: none;
+    transition: 1s ease;
+}
+
+.song-card:hover .play-button {
+    display: block;
+}
+
+.song-card:hover img {
+    filter: brightness(.75);
+}
+
+.trending-songs {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.col-2-layout {
+    display: flex;
+    width: 100%;
+}
+
+.add-cont {
+    width: 25%;
+    margin-left: 20px;
+    background-color: rgb(251, 247, 247);
+}
+
+.song-flex {
+    max-width: 90%;
+    gap: 12px;
+    overflow: hidden;
+    display: flex;
+}
+
+/* MUSIC-PLAYER-SECTION */
+
+.music-player {
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: fixed;
+    bottom: 0;
+}
+
+.songcover img {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.current-music-playing {
+    gap: 10px;
+    align-items: center;
+}
+
+.t_over a {
+    text-decoration: none;
+    color: #000;
+}
+
+.music-controls {
+    gap: 20px;
+    align-items: center;
+}
+
+.music-controls button {
+    border: none;
+    border-radius: 5px;
+    padding: 3px 8px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.music-controls button:hover {
+    filter: brightness(0.90);
+}
+
+
+.music-quality {
+    gap: 20px;
+}
+
+.music-quality button {
+    border: none;
+    border-radius: 5px;
+    padding: 3px 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.music-quality button:hover {
+    filter: brightness(0.90);
+}
+
+#audio-player {
+    display: none;
+}
+
+#song-pause-svg {
+    display: none;
+}
+
+/* VOLUME-CONTROLS */
+
+.v-controls-inner {
+    display: none;
+    position: absolute;
+    bottom: 25px;
+    right: -15px;
+    padding: 6px 19px;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.v-controls-inner h5 {
+    margin-top: 12px;
+    padding: 4px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.v-controls-inner h5:hover {
+    border-bottom: 3px solid rgb(244, 28, 28);
+    border-radius: 8px;
+}
+
+.v-controls-hover {
+    position: relative;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.v-controls-hover:hover .v-controls-inner {
+    display: block;
+}
+
+#music-unmute {
+    display: none;
+}
+
+
+
+
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Ensure it's on top of other elements */
+    display: none;
+    /* Initially hidden */
+}
+
+.loading-overlay p {
+    font-size: 24px;
+}
